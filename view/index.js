@@ -280,12 +280,12 @@ function initEpubjs(file, startChapter = null) {
                 $btn.classList.add("is-info", "is-light");
             } else {
                 // Activate — read current field values
-                const delay  = Math.max(10,  parseInt(document.querySelector("#scroll-delay").value)  || 5000);
-                const amount = Math.max(1,   parseInt(document.querySelector("#scroll-amount").value) || 170);
+                const delay  = Math.max(10,  parseInt(document.querySelector("#scroll-delay").value)  || 4000);
+                const amount = Math.max(1,   parseInt(document.querySelector("#scroll-amount").value) || 130);
 
                 autoScrollInterval = setInterval(() => {
                     const container = document.querySelector(".epub-container");
-                    if (container) container.scrollBy(0, amount);
+                    if (container) container.scrollBy({top: amount, left: 0, behavior: 'smooth'});
                 }, delay);
 
                 $btn.textContent = "⏹ Stop";
