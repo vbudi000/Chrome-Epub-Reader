@@ -1,7 +1,71 @@
+/* ── Theme variables ─────────────────────────────────────────────────────── */
+:root {
+  --bg:          #ffffff;
+  --surface:     #f5f5f5;
+  --text:        #363636;
+  --text-muted:  #7a7a7a;
+  --border:      #dbdbdb;
+  --navbar-bg:   #ffffff;
+  --menu-bg:     #f5f5f5;
+  --link:        #3273dc;
+  --link-active: #3273dc;
+}
+
+html[data-theme="dark"] {
+  --bg:          #17181c;
+  --surface:     #242424;
+  --text:        #b5b5b5;
+  --text-muted:  #888888;
+  --border:      #3a3a3a;
+  --navbar-bg:   #1f2028;
+  --menu-bg:     #1f2028;
+  --link:        #5ea3e4;
+  --link-active: #dbdbdb;
+}
+
 html {
   overflow: hidden;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.2s, color 0.2s;
 }
-body,
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.navbar {
+  background-color: var(--navbar-bg) !important;
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-item,
+.navbar-item strong {
+  color: var(--text) !important;
+}
+
+aside.menu,
+#toc-menu {
+  background-color: var(--menu-bg);
+}
+
+.menu-list a {
+  color: var(--link);
+}
+
+.menu-list a.is-active {
+  background-color: var(--link-active);
+  color: #ffffff;
+}
+
+html[data-theme="dark"] .menu-list a:hover {
+  background-color: #2e3040;
+  color: var(--link-active);
+}
+
+/* ── Layout ──────────────────────────────────────────────────────────────── */
+
 #main {
   overflow: hidden;
   height: 100vh;

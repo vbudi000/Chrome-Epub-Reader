@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 
 html {
-	font-size: 16px;
+	font-size: 22.4px;
 	overflow: hidden;
 }
 body {
@@ -23,7 +23,7 @@ p {
 }
 
 body * {
-	font-family: 'Libre Baskerville', serif;
+	font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .my-dark {
